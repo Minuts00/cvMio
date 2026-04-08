@@ -14,7 +14,7 @@ use App\Http\Controllers\homesController;
 |
 */
 
-Route::get('/index', [homesController::class, 'index']);
+Route::get('/', [homesController::class, 'index']);
 
 Route::get('/anagdata', [homesController::class, 'anagdata']);
 Route::get('/education', [homesController::class, 'education']);
