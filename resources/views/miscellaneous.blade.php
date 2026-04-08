@@ -36,6 +36,7 @@
                 <li>Offro la possibilità di giocare a server privati Minecraft integrando plugin per migliorare l'esperienza di gioco nonché avere la possibilità di imparare linguaggi come Python per lo scripting di eventi in-game.</li>
                 <li>E-Commerce in fase di sviluppo in Laravel con gestione ordini e pannello admin.</li>
                 <li>Applicativo aziendale privato in fase di sviluppo per la vendita di veicoli elettrici da parte del personale aziendale.</li>
+                <li>Montaggio e sviluppo di server dedicati ad uso privato o aziendale.</li>
             </ul>
         </article>
     </div>
