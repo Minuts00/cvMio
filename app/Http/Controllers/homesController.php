@@ -8,7 +8,7 @@ class homesController extends Controller
 {
     public function index()
     {
-        return view ('index');
+        return view ('/');
     }
 
     public function anagdata()
