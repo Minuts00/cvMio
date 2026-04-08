@@ -1,0 +1,163 @@
+@import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+@property --a {
+  syntax: "<angle>";
+  initial-value: 45deg;
+  inherits: true;
+}
+
+@property --r {
+  syntax: "<angle>";
+  initial-value: 5deg;
+  inherits: true;
+}
+
+@property --p {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f1117;
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #bec1c9;
+  margin-bottom: 1.5rem;
+}
+
+.preview {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.glow {
+  --c: #bec1c9;
+  width: min(100%, 360px);
+  min-height: 320px;
+  justify-self: center;
+  border-radius: 25px;
+  border: 4px solid #0000;
+  padding: 10px;
+  color: #fff;
+  background:
+    conic-gradient(
+      from var(--a),
+      #0000 calc(30% - var(--p)),
+      var(--c) calc(50% - var(--p)) calc(50% + var(--p)),
+      #0000 calc(70% + var(--p))
+    ) border-box,
+    linear-gradient(135deg, #1f2a44, #121826) padding-box;
+  --g: linear-gradient(#000 0 0);
+  -webkit-mask:
+    var(--g),
+    var(--g) padding-box,
+    conic-gradient(
+      from var(--a),
+      #000d calc(30% - var(--p)),
+      #000 calc(50% - var(--p)) calc(50% + var(--p)),
+      #000d calc(70% + var(--p))
+    ) content-box;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  --_t: perspective(450px);
+  animation: 4s linear infinite;
+  animation-name: a, r;
+  transition: --p 0.5s, --r 0.4s;
+  cursor: pointer;
+  box-shadow: 0 10px 34px rgb(0 0 0 / 35%);
+}
+
+.glow:hover {
+  --p: 50%;
+  --r: 0deg;
+  animation-play-state: paused;
+}
+
+.doc-card header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.doc-card .body {
+  background: rgb(255 255 255 / 10%);
+  margin: 0 1rem 1rem;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.doc-card p {
+  margin: 0.35rem 0;
+}
+
+.id-card {
+  --c: #7dd3fc;
+}
+
+.license-card {
+  --c: #86efac;
+}
+
+@keyframes a {
+  to {
+    --a: 405deg;
+  }
+}
+
+@keyframes r {
+  0%,
+  100% {
+    transform: var(--_t) rotate3d(1, 1, 0, var(--r));
+  }
+
+  12% {
+    transform: var(--_t) rotate3d(0, 1, 0, var(--r));
+  }
+
+  25% {
+    transform: var(--_t) rotate3d(-1, 1, 0, var(--r));
+  }
+
+  37% {
+    transform: var(--_t) rotate3d(-1, 0, 0, var(--r));
+  }
+
+  50% {
+    transform: var(--_t) rotate3d(-1, -1, 0, var(--r));
+  }
+
+  62% {
+    transform: var(--_t) rotate3d(0, -1, 0, var(--r));
+  }
+
+  75% {
+    transform: var(--_t) rotate3d(1, -1, 0, var(--r));
+  }
+
+  87% {
+    transform: var(--_t) rotate3d(1, 0, 0, var(--r));
+  }
+}
