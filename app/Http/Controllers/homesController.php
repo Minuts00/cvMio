@@ -15,4 +15,20 @@ class homesController extends Controller
     {
         return view ('anagdata');
     }
+
+    public function miscellaneous()
+    {
+        return view ('miscellaneous');
+    }
+
+    public function jobs()
+    {
+        return view ('jobs');
+    }
+
+    public function education()
+    {
+        return view ('education');
+    }
 }
+

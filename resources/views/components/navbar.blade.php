@@ -10,18 +10,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="anagdata">Dati anagrafici</a>
+          <a class="nav-link" href="jobs">Esperienza lavorativa</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Esperienze e competenze
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Istruzione</a></li>
-            <li><a class="dropdown-item" href="#">Esperienza lavorativa</a></li>
-            <li><a class="dropdown-item" href="#">Cos'altro so fare? Ecco!</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="miscellaneous">Parlo di me</a>
         </li>
+        
       </ul>
     </div>
   </div>
