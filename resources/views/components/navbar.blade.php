@@ -3,7 +3,7 @@
 </head>
 <nav class="site-navbar navbar navbar-expand-lg" aria-label="Navigazione principale">
   <div class="container-fluid site-navbar__inner">
-    <a class="site-navbar__brand" href="{{ url('/index') }}"><img src="{{ asset('images/logo.png')}}" class="logo"></a>
+    <a class="site-navbar__brand" href="{{ url('/') }}"><img src="{{ asset('images/logo.png')}}" class="logo"></a>
 
     <button
       class="navbar-toggler site-navbar__toggler"
